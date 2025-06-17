@@ -1,5 +1,6 @@
 {
     "name": "ttnt-demoo",
+    "homepage": "https://github.com/hungdt31/todoList",
     "private": true,
     "version": "0.0.0",
     "type": "module",
@@ -8,7 +9,9 @@
         "build": "tsc -b && vite build",
         "lint": "eslint .",
         "preview": "vite preview",
-        "format": "prettier --write ."
+        "format": "prettier --write .",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d dist"
     },
     "dependencies": {
         "@emotion/react": "^11.14.0",
@@ -17,8 +20,10 @@
         "@hello-pangea/dnd": "^18.0.1",
         "@mui/icons-material": "^7.1.1",
         "@mui/material": "^7.1.1",
+        "gh-pages": "^6.3.0",
         "react": "^19.1.0",
-        "react-dom": "^19.1.0"
+        "react-dom": "^19.1.0",
+        "url": "^0.11.4"
     },
     "devDependencies": {
         "@eslint/js": "^9.25.0",

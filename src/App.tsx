@@ -200,7 +200,7 @@ const TodoBoard: React.FC = () => {
     return (
         <>
             <Header/>
-            <Box sx={{ display: 'flex', p: 1, justifyContent: 'center' }}>
+            <Box sx={{ display: 'flex', p: 1, justifyContent: 'center', flexWrap: 'wrap' }}>
                 <DragDropContext onDragEnd={handleDragEnd}>
                     {Object.values(columns).map(column => (
                         <Box
