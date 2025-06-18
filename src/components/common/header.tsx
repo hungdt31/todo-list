@@ -1,5 +1,5 @@
-import { styled } from "@mui/material"
-import ToggleTheme from "@/components/common/toggleTheme";
+import { styled } from '@mui/material';
+import ToggleTheme from '@/components/common/toggleTheme';
 
 const ParentDiv = styled('div')(({ theme }) => ({
     color: '#ffff',
@@ -9,16 +9,13 @@ const ParentDiv = styled('div')(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
 }));
 
 export default function Header() {
-    
     return (
         <ParentDiv>
-            <h1>
-                TodoList
-            </h1>
+            <h1>TodoList</h1>
             <ToggleTheme />
         </ParentDiv>
     );

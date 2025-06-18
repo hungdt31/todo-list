@@ -27,42 +27,48 @@ export default function ToggleTheme() {
                 label="Age"
                 onChange={handleChange}
             >
-                <MenuItem value={"light"}>
-                    <Box sx={{ 
-                        display: 'flex',
-                        alignItems: 'center',
-                        width: '100%',
-                        gap: 1.5
-                    }}>
+                <MenuItem value={'light'}>
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            width: '100%',
+                            gap: 1.5,
+                        }}
+                    >
                         <WbSunnyIcon />
                         <Typography>Light</Typography>
                     </Box>
                 </MenuItem>
 
-                <MenuItem value={"dark"}>
-                    <Box sx={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        width: '100%',
-                        gap: 1.5
-                    }}>
+                <MenuItem value={'dark'}>
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            width: '100%',
+                            gap: 1.5,
+                        }}
+                    >
                         <DarkModeIcon />
                         <Typography>Dark</Typography>
                     </Box>
                 </MenuItem>
 
-                <MenuItem value={"system"}>
-                    <Box sx={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        width: '100%',
-                        gap: 1.5
-                    }}>
+                <MenuItem value={'system'}>
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            width: '100%',
+                            gap: 1.5,
+                        }}
+                    >
                         <SettingsSuggestIcon />
                         <Typography>System</Typography>
                     </Box>
                 </MenuItem>
             </Select>
         </FormControl>
-    )
+    );
 }

@@ -3,11 +3,11 @@ import react from '@vitejs/plugin-react';
 
 // https://vite.dev/config/
 export default defineConfig({
-    base: "/todoList",
+    base: '/todoList',
     plugins: [react()],
     resolve: {
         alias: {
-            '@': '/src'
+            '@': '/src',
         },
     },
 });
