@@ -18,6 +18,7 @@ const ParentDiv = styled('div')(({ theme }) => ({
     boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
     position: 'relative',
     zIndex: 10,
+    overflow: 'hidden'
 }));
 
 const LogoLink = styled(RouterLink)((_) => ({
