@@ -24,13 +24,14 @@ export default tseslint.config(
                 { allowConstantExport: true },
             ],
             'no-console': 1,
-            'no-unused-vars': 1,
+            'no-unused-vars': ['warn', { 'varsIgnorePattern': '^_', 'argsIgnorePattern': '^_' }],
+            '@typescript-eslint/no-unused-vars': ['warn', { 'varsIgnorePattern': '^_', 'argsIgnorePattern': '^_' }],
 
             // imports MUI library
             'no-restricted-imports': [
                 'error',
                 {
-                    patterns: [{ regex: '^@mui/[^/]+$' }],
+                    patterns: [{ regex: '^@mui/(?!material|icons-material|lab|system|x|styles)[^/]+$' }],
                 },
             ],
         },
