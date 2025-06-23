@@ -18,13 +18,17 @@ export default function ToggleTheme() {
         setMode(event.target.value as 'system' | 'light' | 'dark');
     };
     return (
-        <FormControl sx={{
-            m: 1, minWidth: {
-                md: 150,
-                sm: 120,
-                sx: 90
-            }
-        }} size="small">
+        <FormControl
+            sx={{
+                m: 1,
+                minWidth: {
+                    md: 150,
+                    sm: 120,
+                    sx: 90,
+                },
+            }}
+            size="small"
+        >
             <InputLabel id="demo-select-small-label">Mode</InputLabel>
             <Select
                 labelId="demo-select-small-label"

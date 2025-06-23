@@ -8,6 +8,7 @@ declare module '@mui/material/styles' {
             sidebar: string;
             taskcard: string;
             bgFooter: string;
+            lang: string;
             // Add more custom colors as needed
         };
     }
@@ -18,6 +19,7 @@ declare module '@mui/material/styles' {
             sidebar?: string;
             taskcard?: string;
             bgFooter?: string;
+            lang?: string;
             // Match the structure from above
         };
     }
@@ -39,6 +41,7 @@ const theme = createTheme({
                     sidebar: '#ffffff',
                     taskcard: '#ffff',
                     bgFooter: '#eceff4',
+                    lang: '#eceff4',
                 },
             },
         },
@@ -56,6 +59,7 @@ const theme = createTheme({
                     sidebar: '#121212',
                     taskcard: '#000',
                     bgFooter: '#2e3440',
+                    lang: '#efffff',
                 },
             },
         },
