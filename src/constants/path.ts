@@ -1,4 +1,4 @@
-const BASE_URL = '/todoList';
+const BASE_URL = '/todo-list';
 const routes = {
     HOME: '/',
     TODO: '/board',
