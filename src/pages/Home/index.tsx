@@ -66,7 +66,7 @@ export function HomePage() {
           <Typography variant="h2" component="h1" gutterBottom>
             Quản lý công việc hiệu quả
           </Typography>
-          <Typography variant="h5" component="p" paragraph>
+          <Typography variant="h5" component="p">
             Ứng dụng TaskMaster sử dụng các công nghệ hiện đại để
             mang lại trải nghiệm tốt nhất
           </Typography>
