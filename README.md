@@ -52,3 +52,17 @@ export default tseslint.config({
     },
 });
 ```
+
+## Advanced Knowledge
+
+### Higher-Order Component (HOC)
+
+Là một hàm nhận vào một component và trả về một component mới với thêm logic hoặc props. Nó được dùng để tái sử dụng logic giữa các components (kiểu như "decorator").
+
+- Mục đích:
+  - Tái sử dụng logic của component, chia sẻ logic không liên quan đến giao diện như data fetching, theo dõi trạng thái, lắng nghe sự kiện của trình duyệt.
+  - Cung cấp styling hoặc theming.
+  - Thao tác với Props: HOC có thể thay đổi, thêm, hoặc bớt các props được truyền vào component.
+
+- Khi nào sử dụng:
+  - Tạo HOC để hiện thi trạng thái loading: khi có nhiều component cần lấy dữ liệu từ một API. Bạn muốn hiển thi thông báo "Đang tải ...". Logic này sẽ bị lặp lại ở khắp nơi, vì thế sử dụng HOC là hợp lý.

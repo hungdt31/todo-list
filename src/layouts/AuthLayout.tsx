@@ -1,14 +1,13 @@
 import { Box, Container } from '@mui/material';
 import { Outlet } from 'react-router-dom';
 
-import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 
 /**
- * PublicLayout provides the standard layout structure for public-facing pages
- * with consistent header, main content area, and footer.
+ * AuthLayout provides the standard layout structure for authentication pages
+ * with consistent header, main content area.
  */
-export default function PublicLayout() {
+export default function AuthLayout() {
   return (
     <Box
       sx={{
@@ -35,9 +34,6 @@ export default function PublicLayout() {
           <Outlet />
         </Container>
       </Box>
-
-      {/* Fixed footer */}
-      <Footer />
     </Box>
   );
 }

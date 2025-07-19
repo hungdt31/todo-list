@@ -3,12 +3,17 @@ import { Outlet } from 'react-router-dom';
 
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import withAuth from '@/hocs/withAuth';
 
 /**
- * PublicLayout provides the standard layout structure for public-facing pages
+ * PrivateLayout provides the standard layout structure for public-facing pages
  * with consistent header, main content area, and footer.
  */
-export default function PublicLayout() {
+
+// Tạo component wrapper cho Outlet
+const AuthenticatedOutlet = withAuth(() => <Outlet />);
+
+export default function PrivateLayout() {
   return (
     <Box
       sx={{
@@ -32,7 +37,7 @@ export default function PublicLayout() {
         }}
       >
         <Container maxWidth="xl">
-          <Outlet />
+          <AuthenticatedOutlet />
         </Container>
       </Box>
 
@@ -40,4 +45,4 @@ export default function PublicLayout() {
       <Footer />
     </Box>
   );
-}
+};

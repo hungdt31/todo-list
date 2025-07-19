@@ -1,18 +1,34 @@
 const BASE_URL = '/todo-list';
-const routes = {
-    HOME: '/',
-    TODO: '/board',
-};
 
-// First map to create an array of key-value pairs with the BASE_URL included
-const pathEntries = Object.entries(routes).map(([key, path]) => {
-    // Handle root path specially to avoid double slash
-    const fullPath = path === '/' ? BASE_URL : `${BASE_URL}${path}`;
+// Use as const to get literal types
+const Original = {
+  HOME: '/',
+  TASK: '/task',
+  LOGIN: '/login',
+  JOURNAL: '/journal',
+} as const;
+
+// Extract the keys type
+type RouteKeys = keyof typeof Original;
+
+// Create a helper function with proper typing
+function createPaths<T extends Record<string, string>>(
+  baseUrl: string,
+  routes: T,
+): Record<keyof T, string> {
+  const pathEntries = Object.entries(routes).map(([key, path]) => {
+    const fullPath = path === '/' ? baseUrl : `${baseUrl}${path}`;
     return [key, fullPath];
-});
+  });
 
-// Convert back to an object
-export const paths = Object.fromEntries(pathEntries);
+  return Object.fromEntries(pathEntries) as Record<keyof T, string>;
+}
+
+// Create paths with proper typing
+export const paths = createPaths(BASE_URL, Original);
+
+// Export types
+export type { RouteKeys };
 
 // Export default for convenience
 export default paths;
