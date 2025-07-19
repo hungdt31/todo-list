@@ -10,7 +10,7 @@ interface TaskCardProps {
         content: string;
     };
     index: number;
-    onDelete: (id: string) => void;
+    onDelete: (_: string) => void;
     backgroundColor: {
         light: string;
         dark: string;

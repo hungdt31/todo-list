@@ -153,11 +153,11 @@ const TodoBoard: React.FC = () => {
                             bgcolor: (_) => {
                                 if (mode == 'light')
                                     return todoHelper.getLightColumnColor(
-                                        column.id
+                                        column.id,
                                     );
                                 else if (mode == 'dark')
                                     return todoHelper.getDarkColumnColor(
-                                        column.id
+                                        column.id,
                                     );
                             },
                             borderRadius: 2,
@@ -178,11 +178,11 @@ const TodoBoard: React.FC = () => {
                                     bgcolor: (_) =>
                                         mode == 'light'
                                             ? todoHelper.getSecondaryColor(
-                                                  column.id
-                                              )
+                                                column.id,
+                                            )
                                             : todoHelper.getPrimaryColor(
-                                                  column.id
-                                              ),
+                                                column.id,
+                                            ),
                                     paddingX: 1,
                                     display: 'flex',
                                     alignItems: 'center',
@@ -199,7 +199,7 @@ const TodoBoard: React.FC = () => {
                             <Typography
                                 sx={{
                                     color: todoHelper.getPrimaryColor(
-                                        column.id
+                                        column.id,
                                     ),
                                 }}
                             >
@@ -223,7 +223,7 @@ const TodoBoard: React.FC = () => {
                                         const task = tasks[taskId];
                                         const backgroundColor = {
                                             dark: todoHelper.getPrimaryColor(
-                                                column.id
+                                                column.id,
                                             ),
                                             light: '#ffff',
                                         };
@@ -292,7 +292,7 @@ const TodoBoard: React.FC = () => {
                                     m: 1,
                                     mt: 0,
                                     color: todoHelper.getPrimaryColor(
-                                        column.id
+                                        column.id,
                                     ),
                                     justifyContent: 'flex-start',
                                     '&:hover': {
@@ -301,7 +301,7 @@ const TodoBoard: React.FC = () => {
                                     borderRadius: 2,
                                     textTransform: 'capitalize',
                                     borderColor: todoHelper.getPrimaryColor(
-                                        column.id
+                                        column.id,
                                     ),
                                 }}
                                 onClick={() => setAddingToColumn(column.id)}

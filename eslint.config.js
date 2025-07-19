@@ -24,14 +24,38 @@ export default tseslint.config(
                 { allowConstantExport: true },
             ],
             'no-console': 1,
-            'no-unused-vars': ['warn', { 'varsIgnorePattern': '^_', 'argsIgnorePattern': '^_' }],
-            '@typescript-eslint/no-unused-vars': ['warn', { 'varsIgnorePattern': '^_', 'argsIgnorePattern': '^_' }],
+            'no-unused-vars': [
+                'warn',
+                { varsIgnorePattern: '^_', argsIgnorePattern: '^_' },
+            ],
+            '@typescript-eslint/no-unused-vars': [
+                'warn',
+                { varsIgnorePattern: '^_', argsIgnorePattern: '^_' },
+            ],
+
+            // Auto-fixable formatting rules
+            semi: ['error', 'always'],
+            quotes: ['error', 'single', { avoidEscape: true }],
+            indent: ['error', 4],
+            'comma-dangle': ['error', 'always-multiline'],
+            'object-curly-spacing': ['error', 'always'],
+            'array-bracket-spacing': ['error', 'never'],
+            'space-before-blocks': ['error', 'always'],
+            'keyword-spacing': ['error', { before: true, after: true }],
+            'space-infix-ops': 'error',
+            'eol-last': ['error', 'always'],
+            'no-trailing-spaces': 'error',
+            'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 0 }],
 
             // imports MUI library
             'no-restricted-imports': [
                 'error',
                 {
-                    patterns: [{ regex: '^@mui/(?!material|icons-material|lab|system|x|styles)[^/]+$' }],
+                    patterns: [
+                        {
+                            regex: '^@mui/(?!material|icons-material|lab|system|x|styles)[^/]+$',
+                        },
+                    ],
                 },
             ],
         },

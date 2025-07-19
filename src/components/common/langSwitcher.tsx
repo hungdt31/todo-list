@@ -5,7 +5,7 @@ import { Box, Typography, Switch, styled } from '@mui/material';
 const LanguageSwitch = styled(Box)(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
-    backgroundColor: theme.vars?.palette.custom.lang,
+    backgroundColor: theme.vars?.palette.primary.main,
     padding: '5px 8px',
     '& .MuiSwitch-root': {
         margin: '0 8px',
@@ -32,7 +32,7 @@ export default function LangSwitcher() {
 
     // Handle language change through toggle
     const handleLanguageToggle = (
-        event: React.ChangeEvent<HTMLInputElement>
+        event: React.ChangeEvent<HTMLInputElement>,
     ) => {
         const newLanguage = event.target.checked ? 'en' : 'vi';
         i18n.changeLanguage(newLanguage);

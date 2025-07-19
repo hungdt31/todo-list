@@ -64,9 +64,9 @@ export function HomePage() {
             {/* Hero Section */}
             <StyledSection
                 sx={{
-                    backgroundImage:
-                        'linear-gradient(45deg, #00809D 30%, #03A6A1 90%)',
-                    color: 'white',
+                    // backgroundImage:
+                    //     'linear-gradient(45deg, #00809D 30%, #03A6A1 90%)',
+                    // color: 'white',
                     textAlign: 'center',
                 }}
             >
@@ -240,7 +240,7 @@ export function HomePage() {
                     <Typography variant="h3" component="h2" gutterBottom align="center" sx={{ mb: 6 }}>
                         Tính năng nổi bật
                     </Typography>
-                    
+
                     <FlexContainer sx={{ gap: '24px' }}>
                         <FlexItem width="45%">
                             <Paper sx={{ p: 3, height: '100%' }}>
