@@ -1,4 +1,4 @@
-import { type ReactNode, useState } from 'react';
+import { type ReactNode, useCallback, useState } from 'react';
 
 import { AuthContext } from '@/contexts/Auth';
 
@@ -8,11 +8,22 @@ interface AuthProviderProps {
 }
 
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const localStorageKey = 'isLoggedIn';
+  const getValueFromLocalStorage = () => {
+    const isLoggedInFromLS = localStorage.getItem(localStorageKey);
+    return isLoggedInFromLS == 'true';
+  };
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(getValueFromLocalStorage());
   const value = {
     isLoggedIn,
-    login: () => setIsLoggedIn(true),
-    logout: () => setIsLoggedIn(false),
+    login: useCallback(() => {
+      localStorage.setItem(localStorageKey, 'true');
+      setIsLoggedIn(true);
+    }, []),
+    logout: useCallback(() => {
+      localStorage.setItem(localStorageKey, 'false');
+      setIsLoggedIn(false);
+    }, []),
   };
 
   return (

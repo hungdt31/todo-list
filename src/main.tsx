@@ -9,7 +9,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import App from '@/App';
 import { AuthProvider } from '@/contexts/Auth/AuthProvider';
 import theme from '@/styles/theme';
-import i18n from '@/utils/i18n';
+import i18n from '@/translation';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

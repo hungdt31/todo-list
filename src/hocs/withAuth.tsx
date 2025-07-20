@@ -1,5 +1,3 @@
-// src/hocs/withAuth.tsx
-
 import { Button } from '@mui/material';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';

@@ -6,14 +6,14 @@ import React from 'react';
 
 interface TaskCardProps {
     task: {
-        id: string;
-        content: string;
+      id: string;
+      content: string;
     };
     index: number;
     onDelete: (_: string) => void;
     backgroundColor: {
-        light: string;
-        dark: string;
+      light: string;
+      dark: string;
     };
 }
 

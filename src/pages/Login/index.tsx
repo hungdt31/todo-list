@@ -1,9 +1,10 @@
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import { Box, TextField, Button, Container, Typography } from '@mui/material';
-import { type ChangeEvent, type FormEvent, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { type ChangeEvent, type FormEvent, useState, useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 import paths from '@/constants/path';
+import { AuthContext } from '@/contexts/Auth';
 
 // Define interface for form data
 interface LoginFormData {
@@ -12,6 +13,8 @@ interface LoginFormData {
 }
 
 export const LoginPage = () => {
+  const auth = useContext(AuthContext);
+  const navigate = useNavigate();
   const [formData, setFormData] = useState<LoginFormData>({
     email: '',
     password: '',
@@ -28,6 +31,8 @@ export const LoginPage = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(formData);
+    auth?.login();
+    navigate(paths.HOME);
     // Add form submission logic here
   };
 

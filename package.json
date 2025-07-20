@@ -22,6 +22,7 @@
     "@hello-pangea/dnd": "^18.0.1",
     "@mui/icons-material": "^7.1.1",
     "@mui/material": "^7.1.1",
+    "axios": "^1.10.0",
     "gh-pages": "^6.3.0",
     "i18next": "^25.2.1",
     "react": "^19.1.0",

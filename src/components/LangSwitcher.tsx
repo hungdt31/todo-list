@@ -48,7 +48,6 @@ export default function LangSwitcher() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        mb: 3,
         flexDirection: { xs: 'column', sm: 'row' },
         gap: 2,
       }}
