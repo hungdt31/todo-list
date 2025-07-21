@@ -1,9 +1,7 @@
-import { Box, Typography } from '@mui/material';
+import JournalManager from '@/containers/Journal';
 
 export const JournalPage = () => {
   return (
-    <Box>
-      <Typography>Journal Page</Typography>
-    </Box>
+    <JournalManager />
   );
 };
